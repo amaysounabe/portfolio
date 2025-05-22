@@ -366,7 +366,12 @@
                     <br>
                     <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
                 </div>
-                <input type="hidden" name="_next" value="https://amaysounabe.github.io/portfolio/">
+                <!-- Anti-spam hidden field -->
+                <input type="text" name="_honey" style="display:none">
+                <!-- No captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Redirection après envoi -->
+                <input type="hidden" name="_next" value="https://amaysounabe.github.io/portfolio/index.html">
                 <button type="submit" id="send-button">Envoyer</button>
             </form>
         </div>
