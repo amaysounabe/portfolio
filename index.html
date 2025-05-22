@@ -10,6 +10,7 @@
     <title>Adrien Maysounabe - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -368,10 +369,11 @@
                 </div>
                 <!-- Anti-spam hidden field -->
                 <input type="text" name="_honey" style="display:none">
-                <!-- No captcha -->
-                <input type="hidden" name="_captcha" value="false">
                 <!-- Redirection après envoi -->
                 <input type="hidden" name="_next" value="https://amaysounabe.github.io/portfolio/index.html">
+                <!-- Google reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LfUo0QrAAA"></div>
+                <br>
                 <button type="submit" id="send-button">Envoyer</button>
             </form>
         </div>
