@@ -1,14 +1,14 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    max-width: 1000px;
+    font-size: 18px;
     margin: auto;
-    padding: 20px;
+    padding: 0px;
     line-height: 1.6;
     color: #2b2727;
 }
 
-header, section, footer {
-    background: #e0e2db;
+header, section {
+    background: #e6e6e6;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -23,17 +23,27 @@ a:hover {
     text-decoration: underline;
 }
 
+header {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
 .section {
+    max-width: 1200px;
+    margin: auto;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 
 .section-header {
     margin: -20px;
-    background-color: #5f7470;
+    background-color: #297373;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -55,7 +65,6 @@ a:hover {
 .section-body {
     margin: 20px;
     margin-bottom: -10px;
-    background-color: #e2e0db;
     color: #333;
     padding: 10px;
 }
@@ -78,6 +87,10 @@ a:hover {
 h1, h2, h3 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-size: 24px;
 }
 
 .custom-list {
@@ -124,6 +137,12 @@ h1, h2, h3 {
     flex-shrink: 0;
 }
 
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
 h4 img {
     vertical-align: middle;
     width: 25px;
@@ -137,6 +156,7 @@ h4 img {
     height: 1px;
     background-color: #4a4a4a;
     border-radius: 2px;
+    margin-bottom: 30px;
 }
 
 .interspace {
@@ -155,24 +175,31 @@ h4 img {
 }
 
 .separate {
-    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     list-style: none;
     padding: 0;
-    display: flex;
-    gap: 0rem;
+    margin: 6px 0 0;
+    align-items: center;
 }
 
-.separate li:not(:last-child)::after {
-    content: "";
-    display: inline-block;
-    width: 1px;               /* épaisseur plus visible */
-    height: 1.3em;              /* hauteur égale à la ligne */
-    background-color: #444;   /* couleur plus sombre */
-    margin-left: 0.7rem;
-    margin-right: -7px;
-    vertical-align: middle;
+.separate li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.95rem;
     position: relative;
-    top: 3px;
+    padding-right: 10px;
+}
+
+.separator {
+    width: 1px;
+    height: 1.2em;
+    background: #888;
+    display: inline-block;
+    margin: 0 1px;
+    transform: translateY(-5px);
 }
 
 .xpcontent {
@@ -249,11 +276,84 @@ h4 img {
     aspect-ratio: 1920 / 1300;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    object-fit: cover; /* ✅ conserve les proportions et coupe le surplus */
-    object-position: center; /* ✅ centre l’image dans le cadre */
+    object-fit: cover; 
+    object-position: center; 
     display: block;
 }
 
 .project-content {
     text-align: center;
+}
+
+input, textarea {
+    width: 100%;                 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;       
+    transition: border-color 0.3s ease;
+}
+
+#send-button {
+    width: 200px;
+    padding: 14px 20px;
+    display: block;
+    margin: 10px auto;
+    font-size: 1rem;
+    background-color: #297373;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#send-button:hover {
+    background-color: #012725;
+    transform: translateY(-2px);
+}
+
+#send-button:active {
+    transform: translateY(1px);
+    background-color: #2d639b;
+}
+
+label {
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+}
+
+#icons-links {
+    display: flex;
+    justify-content: center;     
+    align-items: center;         
+    gap: 10px;                  
+    margin-top: 20px;
+}
+
+#icons-links img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease;
+    margin: 15px;
+}
+
+#icons-links img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    background-color: #297373;
+    font-family: 'Roboto', serif;
+    font-size: 16px;
+    color: #ffffff;
 }
