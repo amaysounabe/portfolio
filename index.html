@@ -345,34 +345,30 @@
         <div class="section-body" id="formulaire">
             <form action="https://formsubmit.co/adrien.maysounabe@gmail.com" method="POST">
                 <div class="form-group">
-                    <label for="name">Nom</label>
-                    <br>
-                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <label for="name">Nom</label><br>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
                 </div>
                 <br>
                 <div>
-                    <label for="email">Adresse email</label>
-                    <br>
-                    <input type="email" name="email" placeholder="Votre email" required>
+                    <label for="email">Adresse email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
                 </div>
                 <br>
                 <div>
-                    <label for="object">Objet</label>
-                    <br>
-                    <input type="text" name="subject" placeholder="Objet" required>
+                    <label for="subject">Objet</label><br>
+                    <input type="text" id="subject" name="subject" placeholder="Objet" required>
                 </div>
                 <br>
                 <div>
-                    <label for="message">Message</label>
-                    <br>
-                    <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" placeholder="Votre message" rows="6" required></textarea>
                 </div>
                 <!-- Anti-spam hidden field -->
                 <input type="text" name="_honey" style="display:none">
+                <!-- Activer le captcha automatique de FormSubmit -->
+                <input type="hidden" name="_captcha" value="true">
                 <!-- Redirection après envoi -->
                 <input type="hidden" name="_next" value="https://amaysounabe.github.io/portfolio/index.html">
-                <!-- Google reCAPTCHA widget -->
-                <div class="g-recaptcha" data-sitekey="6LcCp0QrAAAAADLhUQJIOLl9YN1bllirs1-TOVKR"></div>
                 <br>
                 <button type="submit" id="send-button">Envoyer</button>
             </form>
