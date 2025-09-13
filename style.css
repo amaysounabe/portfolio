@@ -137,8 +137,8 @@ h3 {
 }
 
 .skills-list li img.icon-math {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-top: 2px;
     margin-right: 10px;
     flex-shrink: 0;
@@ -172,13 +172,12 @@ h4 img {
 }
 
 .inline-icons {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 5px;
     position: relative;
-    top: 3px;
 }
 
 .separate {
@@ -191,23 +190,37 @@ h4 img {
     align-items: center;
 }
 
-.separate li {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.95rem;
-    position: relative;
-    padding-right: 10px;
+/* Espacement vertical entre les li principaux */
+.skills-list > li {
+    margin-bottom: 30px; /* espace entre chaque section principale */
 }
 
-.separator {
-    width: 1px;
-    height: 1.2em;
-    background: #888;
-    display: inline-block;
-    margin: 0 1px;
-    transform: translateY(-5px);
+/* Optionnel : enlever l'espacement du dernier li */
+.skills-list > li:last-child {
+    margin-bottom: 0;
 }
+
+.separate li {
+    display: inline-flex;
+    background-color: #332e2e; /* gris clair */
+    color: #ffffff;            /* texte gris foncé */
+    padding: 8px 15px;         /* padding vertical/horizontal */
+    border-radius: 20px;       /* coins arrondis */
+    margin: 3px 5px;           /* espacement entre tags */
+    font-size: 0.9em;
+    list-style: none;
+    vertical-align: middle;
+
+    /* Relief */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* ombre douce */
+    transition: all 0.2s ease-in-out;      /* animation au survol */
+}
+
+.separate li img.inline-icons {
+    vertical-align: text-top; /* ou middle, selon ce que tu veux */
+    margin-bottom: 2px;        /* ajuste la hauteur comme tu veux */
+}
+
 
 .xpcontent {
     margin: 5px 0px 5px 0px;
